@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Crete+Round:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+html{
+  scroll-snap-type: y mandatory;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color:#F8F4E3;
+}
+section{
+  height:100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header{
+position: absolute;
+ background-color: transparent;
+ padding: 10px;
+ display: flex;
+ justify-content: space-between;
+ top: 0;
+ left: 0;
+ width:100%;
+ align-items: start;
+color: aliceblue;
+max-height: 150px;
+
+}
+
+.icons{
+  display: flex;
+  gap: 10px;
+align-items: center;
+  top: 10px;
+  left: 10px;
+  color: #800020;
+  font-size: 25px;
+  cursor: pointer;
+  width: 50vh;
+ 
+  
+}
+
+.first{
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.logo h1{font-family: 'Great Vibes', serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #D4AF37;
+  margin: 0;
+}
+  
+img{
+  height: 100px;
+  width: auto;
+  margin: 0;
+ 
+
+}
+.logo{
+ 
+  display: flex;
+ align-items: center; 
+  gap: 10px; 
+  flex-direction: column;
+  text-align: center;
+  width: 80vh;
+ 
+
+}
+
+
+i{
+  align-items: center;
+  gap: 15px;
+  top: 20px;
+  font-size: 24px;
+  color: #800020;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.koufa{
+  text-align: right;
+  display: flex;
+  align-items: center;
+justify-content: right;
+  top: 15px;
+  color: #800020;
+  font-size: 25px;
+  width: 50vh;
+ 
+}
+a{
+  color: #800020;
+  text-decoration: none;  
+  font-size: 25px;
+  padding-right: 15px;
+ 
+}
+
+
+.center {
+  height: 500px;
+  position: relative;
+
+}
+
+.hello {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  font-family: 'Tajawal', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeInMove 2s ease-in-out forwards;
+  opacity: 1;
+  color: rgb(0, 0, 0);
+
+}
+
+
+
+
+/* Animation */
+@keyframes fadeInMove {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+  }
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+}
+
+
+
+button{
+  /* From Uiverse.io by adamgiebl */ 
+  background-color: #d43165;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px #800020, inset -4px -4px 10px #800020;
+  color: #0c0101 solid;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px 40px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid  #800020;
+ display: inline-block;
+ margin: 10px;
+}
+
+button:hover {
+  box-shadow: inset 2px 2px 5px #800020, inset -2px -2px 5px #800020, 2px 2px 5px #800020, -2px -2px 5px #800020;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #4b4108, inset -2px -2px 5px #4b4108 2px 2px 5px #4b4108, -2px -2px 5px #4b4108;
+}
+.icons i, .koufa i, .icons .menu-icon, .icons .search-icon,a {
+  transition: transform 0.3s ease-in-out;
+}
+.icons i:hover, 
+.koufa i:hover, 
+.icons .menu-icon:hover, 
+.icons .search-icon:hover,a:hover {
+  transform: scale(1.2);
+  color: #f1c40f;}
+  
