@@ -1,19 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Crete+Round:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 
-/* General Styles */
 body {
     background: linear-gradient(to bottom, #800020, #F8F4E3);
-   
     font-family: 'Amiri', serif;
-    margin: 0;
-    padding: 0;
-}
-section{
-  scroll-snap-align: start;
-  gap: 10px;
- 
-
+   
 }
 
 /* Navbar Styling */
@@ -68,203 +59,9 @@ section{
 .navbar-nav .nav-link:hover {
     color: #D4AF37;
 }
-
-
-
-.hello {
-    max-width: 50%;
-    color: #F8F8F8;
-    font-size: 20px;
-    line-height: 1.5;
-    font-family: Amiri static;
-   
+section{
+    height: 100vh;
 }
-.navbar-toggler{
-    border: none;
-   
-}
-
-@media (max-width: 480px) {
-    .hello {
-        max-width: 100%;
-        text-align: center;
-    }
-}
-
-/* Carousel Styling */
-.first {
-    height: 100%;
-    width: 80%;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-   
-   
-}
-
-
-    .carousel-item img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        display: block;
-        margin:0  auto;
-        }
-   
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .row.container {
-        flex-direction: column;
-        text-align: center;
-         
-    }
-
-    
-    .carousel-item img{
-    height: auto;
-    width: 100%;
-    object-fit: contain;
-    display: block;
-    margin:0  auto;
-    }
-    
-}
-@media (max-width: 768px) {
-   
-  
-    .navbar-nav {
-        width: 100%;
-        display: flex;
-        flex-direction: column; /* Stack links vertically */
-        align-items: end;
-    }
-    .navbar-brand{
-       padding-right: 5px;
-        
-    }
-
-}
-.button{
-    
-    background-color: #d43165;
-    border-radius: 50px;
-    box-shadow: inset 4px 4px 10px #800020, inset -4px -4px 10px #800020;
-    color: #F8F4E3 solid;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 15px 40px;
-    transition: all 0.2s ease-in-out;
-    border: 2px solid  #800020;
-   display: inline-block;
-   margin: 10px;
-  }
-  .button:hover {
-    box-shadow: inset 2px 2px 5px #800020, inset -2px -2px 5px #800020, 2px 2px 5px #800020, -2px -2px 5px #800020;
-    transform: scale(1.05);
-  }
-  
-  .button:focus {
-    outline: none;
-    box-shadow: inset 2px 2px 5px #4b4108, inset -2px -2px 5px #4b4108 2px 2px 5px #4b4108, -2px -2px 5px #4b4108;
-  }
-  
-  
-  
-  
-  
-marquee {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    background: transparent;
-    
-  }
-  
-  marquee ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    
-  }
-  
-  marquee li {
-    padding: 30px;
-    font-size: 25px;
-    color: black;
-  }
-  .marquee-wrapper {
-    margin-top: 20px;
-    border-top: 2px solid #800020; 
-    border-bottom: 2px solid  #800020 ; 
-   
-    
-  }
-  
-  .card-group {
-    display: flex;
-    gap: 25px;
-}
-
-.card {
-    width:80%;
-    height: 300px;
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-    transition: 0.55s;
-    margin: 20px;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-    transition: 0.55s;
-}
-
-.card .layer {
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 75%;
-    opacity: 0;
-    transition: 0.3s;
-}
-
-.card .info {
-    position: absolute;
-    bottom: -50%;
-    padding: 15px;
-    opacity: 0;
-    transition: 0.5s bottom, 1.75s opacity;
-}
-   
-   
-    
-.card:hover,
-.card:hover img,
-.card:hover layer {
-    transform: scale(1.1);
-}
-
-.card:hover > .layer {
-    opacity: 1;
-}
-
-.card:hover > .info {
-    bottom: 0;
-    opacity: 1;
-}
-
-.card-group:hover > .card:not(:hover) {
-    filter: blur(5px);
-}
-
 /* Footer Container */
 .footer {
     display: flex;
@@ -379,8 +176,3 @@ marquee {
     position: relative;
     left: -40px;
   }
-
-
-  
-  
-
