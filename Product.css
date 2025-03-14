@@ -1,14 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Crete+Round:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&display=swap");
+html{
+  width: 100vw;
+}
+/* Remove border and adjust color */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active{
+  border: none ;
+  outline: none ;
+  padding: 0; 
+  box-shadow: none;
 
+}
+
+/* Customize hamburger icon color */
+.navbar-toggler-icon {
+  transition: all 0.3s ease ;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23800020' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  width: 1.5em; /* Smaller icon size */
+  height: 1.5em;
+  
+}
+
+/* Hover effect matching nav links */
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23d4af37' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  opacity: 0.9;
+  
+}
 body {
-  align-items: center;
+  overflow-x: hidden;
+ margin: 0;
+ padding: 0;
   background-color: no-repeat;
   font-family: "Amiri", serif;
-  background: linear-gradient(to bottom, #800020, #f8f4e3) no-repeat;
+  background: linear-gradient(to bottom, #800020, #f8f4e3) ;
 }
 
 section {
+  
   height: 80vh;
   width: 100%;
 }
@@ -54,60 +85,55 @@ section {
 .navbar-nav .nav-link:hover {
   color: #d4af37;
 }
+
 .image-container {
-  width: 100%;
-  height: auto; /* Keeps the aspect ratio */
-  display: block; /* Removes extra space below the image */
-  object-fit: contain; /* Ensures it covers the width properly */
-}
-.image-container {
-  width: 100%;
-  height: 100vh; /* Adjust as needed */
+  object-fit: contain;
+ width: 100vw;
+  height: auto; /* Adjust as needed */
   background-image: url("product.jpg");
   background-size: cover; /* Ensures it covers the screen */
   background-position: center; /* Centers the image */
 }
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 10px;
-}
-* {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px; /* Replace margin with gap */
+  padding: 20px;
+  width: 100%;
   box-sizing: border-box;
+  
 }
 
 .card {
- padding: 1px;
-  height: 500px;
-  width: 250px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  margin: 20px;
+  width: 100%; 
+  margin: 10px; 
+  height:auto; 
 }
 .card.hide {
   display: none;
 }
 
 .card:hover {
+  transition: all 0.3s ease ;
   transform: scale(1.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
+
+/* Remove after fixing data source */
 .card img {
   width: 100%;
-  height: 80%;
+  height: 60%;
+  
   object-fit: cover;
-  border-bottom: 2px solid;
+  
 }
 
 .card-content {
   padding: 15px;
   text-align: center;
+
+ 
 }
 
 .card h3 {
@@ -129,6 +155,7 @@ section {
 }
 
 .btn {
+  margin-bottom: 0;
   display: inline-block;
   padding: 10px 20px;
   background: #ff4757;
@@ -199,6 +226,7 @@ input[type="range"]::-moz-range-thumb {
   color: gold;
 }
 .custom {
+
   font-weight: bold;
   color: #4b0718;
   position: relative;
@@ -343,5 +371,4 @@ input[type="range"]::-moz-range-thumb {
 /* Contact Button Position */
 .contact-button {
   position: relative;
-  left: -40px;
 }

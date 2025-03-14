@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="details.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,7 +76,112 @@
         </div>
       </nav>
       <section>
-     
+        <div class="container py-5">
+            <div class="row ">
+                <!-- Product Image -->
+                <div class="col-md-6 justify-content-center align-items-center d-flex image-container">
+                    <img src="chawi1.jpg" class="img-fluid  active "  id="product-image" alt="Silk Maxi Dress">
+                </div>
+        
+                <!-- Product Details -->
+                <div class="col-md-6 me-auto ">
+                    <h1 class="mb-3">الملحفة الشاوية</h1>
+                    <div class="product-price mb-4">1000.000DA</div>
+                    
+                    <div class="mb-4">
+                        <h5>الالوان المتوفرة</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="color-option active">
+                                <button
+                                class="color-btn" 
+                                data-color="black" 
+                                data-image="chawi-black.jpg"
+                                style="background-color:#000000"
+                              ></button>
+                            </div>
+                            <div class="color-option">
+                                <button
+                                class="color-btn" 
+                                data-color="light-blue" 
+                                data-image="chawi-midnight.jpg"
+                                style="background-color: #4169E1"
+                              ></button>
+                            </div>
+                            <div class="color-option active" >
+
+                                <button
+                                class="color-btn" 
+                                data-color="violet" 
+                                data-image="chawi-violet.jpg"
+                                style="background-color:#D7BDE2"
+                              ></button>
+                            </div>
+                            <div class="color-option">
+                                <button 
+                                class="color-btn" 
+                                data-color="chawi1" 
+                                data-image="chawi1.jpg"
+                                style="background-color: #ff0000"
+                              ></button>
+                            </div>
+                            <div class="color-option" >
+                                <button 
+                                class="color-btn" 
+                                data-color="Emerald Green" 
+                                data-image="chawi-vert.jpg"
+                                style="background-color: #98FB98"
+                              ></button>
+                            </div>
+                            <div class="color-option"  >
+                                <button 
+                                class="color-btn" 
+                                data-color="Royal Purple"
+                                data-image="chawi-ciel.jpg"
+                                style="background-color: #ADD8E6"
+                               
+                              ></button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="mb-4">
+                        <h5>الوصف</h5>
+                        <p class="text-muted">
+                            ...
+                        </p>
+                    </div>
+        
+                    <div class="mb-4">
+                        <h5>اختاري</h5>
+                        <div class="d-flex flex-wrap">
+                            <div class="size-option me-2 mb-2">XS</div>
+                            <div class="size-option me-2 mb-2">S</div>
+                            <div class="size-option me-2 mb-2">M</div>
+                            <div class="size-option me-2 mb-2">L</div>
+                            <div class="size-option mb-2">XL</div>
+                        </div>
+                    </div>
+        
+                    <div class="d-grid gap-2">
+                        <button class="btn add-to-cart-btn">
+                            <i class="fas fa-shopping-bag me-2"></i>اضف الى السلة
+                        </button>
+                    </div>
+        
+                    <div class="mt-4">
+                        <h5 class="mb-3">تفاصيل</h5>
+                        <ul class="product-details-list list-unstyled">
+                            <li><strong>المادة:</strong> قماش خفيف ومريح</li>
+                            <li><strong>العناية:</strong> غسيل يدوي أو آلي بدرجة حرارة منخفضة</li>
+                            <li><strong>الطول:</strong> طويل يغطي الجسم بالكامل</li>
+                            <li><strong>الإغلاق:</strong> يلف حول الجسم بدون سحّاب</li>
+                            <li><strong>اللون الحالي:</strong> <span id="selected-color">متعدد الألوان بنقوش تقليدية</span></li>    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
       </section>
 
@@ -125,6 +231,24 @@
     
         </div>
     </footer>
+    <script>
+ document.querySelectorAll('.color-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    // احصل على رابط الصورة من السمة data-image
+    const newImage = this.dataset.image;
+    
+    // غيّر مصدر الصورة الرئيسية
+    document.getElementById('product-image').src = newImage;
+    
+    // (اختياري) إضافة تأثير تغيير سلس
+    document.getElementById('product-image').style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('product-image').style.opacity = '1';
+    }, 300);
+  });
+});
+    </script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
     <script src="bootstrap.bundle.min.js"></script> 
 </body>
 </html>

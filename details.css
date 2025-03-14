@@ -6,6 +6,32 @@ body {
     font-family: 'Amiri', serif;
    
 }
+/* Remove border and adjust color */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active{
+  border: none ;
+  outline: none ;
+  padding: 0; 
+  box-shadow: none;
+
+}
+
+/* Customize hamburger icon color */
+.navbar-toggler-icon {
+ transition: all 0.3s ease ;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23800020' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  width: 1.5em; /* Smaller icon size */
+  height: 1.5em;
+  
+}
+
+/* Hover effect matching nav links */
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23d4af37' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  opacity: 0.9;
+  
+}
 
 /* Navbar Styling */
 .navbar {
@@ -60,7 +86,7 @@ body {
     color: #D4AF37;
 }
 section{
-    height: 100vh;
+    height: 150vh;
 }
 /* Footer Container */
 .footer {
@@ -176,3 +202,62 @@ section{
     position: relative;
     left: -40px;
   }
+  
+.product-price {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.color-option:hover {
+    transform: scale(1.1);
+}
+.color-option.active {
+    border-color: #2c3e50;
+}
+.add-to-cart-btn {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+.add-to-cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+.product-details-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.size-option {
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.size-option:hover {
+    background-color: #f8f9fa;
+}
+#product-image {
+   
+    animation: fadeIn 0.6s ease-out;
+    max-width: 100%;
+     height: 500px;
+    height: auto;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
